@@ -48,7 +48,6 @@ public class MergeSortedList {
 
         ListNode node = msl.merge(msl.l1,msl.l2);
         msl.printList(node);
-
     }
 
     public void printList(ListNode node){
