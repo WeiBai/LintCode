@@ -36,19 +36,20 @@ public class BST<Key extends Comparable<Key>, Value>{
         if (x == null) {
             return null;
         }
-
+        // recursive search
         int cmp = key.compareTo(x.key);
         if (cmp < 0){
             x.left = delete(x.left, key);
         } else if (cmp > 0){
             x.right = delete(x.right, key);
-        } else {
-            if (x.right == null) {
+        } else { // delete
+            if (x.right == null) { // case 1
                 return x.left;
             }
-            if (x.left == null) {
+            if (x.left == null) { // case 2
                 return x.right;
             }
+            // case 3
             TreeNode t = x;
             x = min(x.right);
             x.right = deleteMin(t.right);
@@ -71,14 +72,17 @@ public class BST<Key extends Comparable<Key>, Value>{
             return x.right;
         }
         x.left = deleteMin(x.left);
+
         x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
 
     private TreeNode put(TreeNode x, Key key, Value val){
+        // update and corner case
         if (x == null){
             return new TreeNode(key, val, 1);
         }
+        // recursive search and update
         int cmp = key.compareTo(x.key);
         if (cmp < 0) {
             x.left = put(x.left, key, val);
@@ -87,6 +91,7 @@ public class BST<Key extends Comparable<Key>, Value>{
         } else {
             x.val = val;
         }
+
         x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
