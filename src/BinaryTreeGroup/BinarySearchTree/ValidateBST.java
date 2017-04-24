@@ -14,7 +14,7 @@ public class ValidateBST {
 
         root.left = left;
         root.right = right;
-       
+
 
         ValidateBST bst = new ValidateBST();
         boolean result = bst.isValidate(root);
