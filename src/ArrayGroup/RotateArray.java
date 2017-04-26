@@ -23,6 +23,9 @@ public class RotateArray {
         for (int num : arr){
             System.out.println(num);
         }
+
+        String sample = "this";
+        System.out.println(sample.substring(0,2));
     }
 
     public void rotate(ArrayList<Integer> arr, int p){
