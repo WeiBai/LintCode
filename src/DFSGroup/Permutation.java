@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * Created by baiwe on 2017/4/27.
  */
-public class SubSet {
+public class Permutation {
 
-    public List<List<Integer>> subset(int[] nums){
+    public List<List<Integer>> permute(int[] nums){
         List<List<Integer>> result = new ArrayList<List<Integer>>();
 
         if (nums == null){
@@ -22,21 +22,26 @@ public class SubSet {
         }
 
         Arrays.sort(nums);
-        helper(result, new ArrayList<Integer>(), nums, 0);
+        helper(result, new ArrayList<Integer>(), nums);
 
         return result;
     }
 
     public void helper(List<List<Integer>> result,
                        ArrayList<Integer> list,
-                       int[] nums,
-                       int start){
+                       int[] nums){
 
-        result.add(new ArrayList<Integer>(list));
+        if (list.size() == nums.length){
+            result.add(new ArrayList<Integer>(list));
+        }
 
-        for (int i = start; i < nums.length ; i++){
+        for (int i = 0; i < nums.length; i++){
+            if (list.contains(nums[i])){
+                continue;
+            }
+
             list.add(nums[i]);
-            helper(result, list, nums, i + 1);
+            helper(result, list, nums);
             list.remove(list.size() - 1);
         }
     }

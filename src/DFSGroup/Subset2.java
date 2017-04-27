@@ -18,6 +18,7 @@ public class Subset2 {
 
         if (nums.length == 0){
             result.add(new ArrayList<Integer>());
+            return result;
         }
 
         Arrays.sort(nums);
