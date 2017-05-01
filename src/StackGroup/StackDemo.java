@@ -14,5 +14,6 @@ public class StackDemo {
         stack.push(1);
 
         System.out.println(stack.pop());
+        System.out.println(stack.peek());
     }
 }
