@@ -10,7 +10,7 @@ import java.util.Queue;
  */
 public class TopologicalSorting {
 
-    public ArrayList<DirectedGraphNode> sort(Arrist<DirectedGraphNode> graph){
+    public ArrayList<DirectedGraphNode> sort(ArrayList<DirectedGraphNode> graph){
         ArrayList<DirectedGraphNode> result = new ArrayList<DirectedGraphNode>();
 
         HashMap<DirectedGraphNode, Integer> map = new HashMap<>();
