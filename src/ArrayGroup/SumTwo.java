@@ -35,7 +35,9 @@ public class SumTwo {
 
     // two for loops
     public int[] twoSum(int[] nums, int target) {
-
+        int[][] input = new int[3][4];
+        System.out.println("The number of row: "+input.length);
+        System.out.println("The number of column: "+ input[0].length);
         int [] result = new int[2];
 
         for (int i = 0; i < nums.length; i++){
