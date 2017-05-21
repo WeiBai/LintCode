@@ -18,7 +18,7 @@ public class ClassicalBinarySearch {
         }
 
         int start = 0;
-        int end = nums.length;
+        int end = nums.length - 1;
         int mid;
 
         while(start + 1 < end){
