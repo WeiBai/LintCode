@@ -1,4 +1,4 @@
-package ArrayGroup;
+package ArrayGroup.TwoPointer;
 
 /**
  * Created by baiwe on 2017/6/23.
